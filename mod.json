@@ -8,26 +8,50 @@
   "id": "max.cheat-pro",
   "name": "MAX CHEAT PRO",
   "developer": "Max",
-  "description": "67-feature Geometry Dash cheat menu with floating glass button and click sound.",
+  "description": "MAX CHEAT PRO - floating menu with custom click sounds and gameplay settings.",
   "settings": {
-    "click-sound": {
-      "name": "Click Sound",
-      "description": "Play a click sound when pressing menu buttons.",
+    "floating-button": {
+      "name": "Плавающая кнопка",
+      "description": "Показывать плавающую кнопку меню",
       "type": "bool",
       "default": true
     },
     "menu-opacity": {
-      "name": "Menu Opacity",
-      "description": "Transparency of the menu.",
+      "name": "Прозрачность меню",
+      "description": "Прозрачность окна меню",
       "type": "int",
       "default": 80,
       "min": 10,
       "max": 100
     },
-    "floating-button": {
-      "name": "Floating Button",
+    "click-sound": {
+      "name": "Звук кликов",
+      "description": "Включить звук нажатий",
       "type": "bool",
       "default": true
+    },
+    "custom-click": {
+      "name": "Свой звук MP3",
+      "description": "Выбрать собственный звук",
+      "type": "file",
+      "default": "",
+      "control": {
+        "dialog": "open",
+        "filters": [
+          {
+            "files": ["*.mp3"],
+            "description": "MP3 Audio"
+          }
+        ]
+      }
+    },
+    "click-volume": {
+      "name": "Громкость клика",
+      "description": "Громкость звука нажатия",
+      "type": "int",
+      "default": 70,
+      "min": 0,
+      "max": 80
     }
   },
   "dependencies": {}
