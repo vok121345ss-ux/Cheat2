@@ -1,0 +1,34 @@
+
+{
+  "geode": "5.11.2",
+  "gd": {
+    "android": "2.2081"
+  },
+  "version": "v1.0.0",
+  "id": "max.cheat-pro",
+  "name": "MAX CHEAT PRO",
+  "developer": "Max",
+  "description": "67-feature Geometry Dash cheat menu with floating glass button and click sound.",
+  "settings": {
+    "click-sound": {
+      "name": "Click Sound",
+      "description": "Play a click sound when pressing menu buttons.",
+      "type": "bool",
+      "default": true
+    },
+    "menu-opacity": {
+      "name": "Menu Opacity",
+      "description": "Transparency of the menu.",
+      "type": "int",
+      "default": 80,
+      "min": 10,
+      "max": 100
+    },
+    "floating-button": {
+      "name": "Floating Button",
+      "type": "bool",
+      "default": true
+    }
+  },
+  "dependencies": {}
+}
