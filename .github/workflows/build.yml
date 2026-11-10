@@ -1,0 +1,38 @@
+
+name: Build MAX CHEAT PRO
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Android ARM64
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build Geode Mod
+        uses: geode-sdk/build-geode-mod@main
+        with:
+          target: Android64
+          sdk: given
+          cli: latest
+          build-config: Release
+          path: ./
+          bindings: geode-sdk/bindings
+          android-min-sdk: 23
+          use-cpm-cache: true
+          use-lto: true
+
+      - name: Upload Mod
+        uses: actions/upload-artifact@v4
+        with:
+          name: MAX-CHEAT-PRO-Android64
+          path: "**/*.geode"
+          if-no-files-found: error
+          
